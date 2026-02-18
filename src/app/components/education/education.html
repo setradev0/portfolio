@@ -1,0 +1,39 @@
+<section id="education" class="py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-surface-800 dark:text-white mb-4">Formation</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      @for (edu of educations; track edu.degree) {
+        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm border border-surface-200 dark:border-surface-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-start gap-4">
+            <div class="p-3 rounded-xl bg-primary-100 dark:bg-primary-900/40 shrink-0">
+              @if (edu.icon === 'graduation') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                </svg>
+              }
+              @if (edu.icon === 'school') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              }
+            </div>
+            <div>
+              <div class="text-xs font-medium text-primary-600 dark:text-primary-400 mb-1">{{ edu.period }}</div>
+              <h3 class="text-lg font-bold text-surface-800 dark:text-white">{{ edu.degree }}</h3>
+              @if (edu.field) {
+                <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{{ edu.field }}</p>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

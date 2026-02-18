@@ -1,0 +1,88 @@
+<section id="skills" class="py-24 bg-surface-100/50 dark:bg-surface-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-surface-800 dark:text-white mb-4">Compétences</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
+      <p class="text-surface-500 dark:text-surface-400 mt-4 max-w-xl mx-auto">
+        Les technologies et outils que j'utilise pour donner vie à vos projets.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (category of skillCategories; track category.title) {
+        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm hover:shadow-md dark:shadow-none border border-surface-200 dark:border-surface-700 transition-all duration-300 hover:-translate-y-1"
+             [class.lg:col-span-3]="category.icon === 'sparkles'"
+             [class.bg-gradient-to-r]="category.icon === 'sparkles'"
+             [class.from-neon-50]="category.icon === 'sparkles'"
+             [class.to-pop-50]="category.icon === 'sparkles'"
+             [class.dark:from-neon-950/20]="category.icon === 'sparkles'"
+             [class.dark:to-pop-950/20]="category.icon === 'sparkles'"
+             [class.border-neon-200]="category.icon === 'sparkles'"
+             [class.dark:border-neon-800/40]="category.icon === 'sparkles'">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="p-2.5 rounded-xl" [class]="category.icon === 'sparkles' ? 'bg-gradient-to-br from-neon-500 to-pop-500' : 'bg-primary-100 dark:bg-primary-900/40'">
+              @if (category.icon === 'layout') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              }
+              @if (category.icon === 'server') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+              }
+              @if (category.icon === 'database') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              }
+              @if (category.icon === 'tool') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              }
+              @if (category.icon === 'sparkles') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              }
+            </div>
+            <h3 class="text-lg font-bold text-surface-800 dark:text-white">{{ category.title }}</h3>
+          </div>
+
+          <!-- Vibe Coding: horizontal grid layout -->
+          @if (category.icon === 'sparkles') {
+            <p class="text-sm text-surface-500 dark:text-surface-400 mb-5">
+              J'utilise l'IA comme accélérateur de productivité pour coder plus vite, plus proprement et livrer des solutions robustes.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              @for (skill of category.skills; track skill.name) {
+                <div class="text-center p-4 rounded-xl bg-white/70 dark:bg-surface-800/60 border border-neon-100 dark:border-neon-900/30">
+                  <div class="text-2xl font-extrabold bg-gradient-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">{{ skill.level }}%</div>
+                  <div class="text-xs font-medium text-surface-600 dark:text-surface-300 mt-1">{{ skill.name }}</div>
+                </div>
+              }
+            </div>
+          } @else {
+            <div class="space-y-4">
+              @for (skill of category.skills; track skill.name) {
+                <div>
+                  <div class="flex justify-between mb-1.5">
+                    <span class="text-sm font-medium text-surface-700 dark:text-surface-300">{{ skill.name }}</span>
+                    <span class="text-sm text-surface-400 dark:text-surface-500">{{ skill.level }}%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-200 dark:bg-surface-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 rounded-full transition-all duration-700"
+                         [style.width.%]="skill.level">
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>
