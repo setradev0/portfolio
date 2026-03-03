@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rakotonirina-setraniaina-franckie.netlify.app/sitemap.xml

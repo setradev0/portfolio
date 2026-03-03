@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Setraniaina Franckie RAKOTONIRINA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      background: #fff;
+      font-size: 9.5pt;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 72mm;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 25px 18px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      color: #38bdf8;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #334155;
+      font-weight: 700;
+    }
+
+    .sidebar .section { margin-bottom: 20px; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 8.5pt;
+      color: #cbd5e1;
+    }
+
+    .contact-item .icon {
+      color: #38bdf8;
+      font-size: 10pt;
+      width: 14px;
+      text-align: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-item a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    /* Skills */
+    .skill-item {
+      margin-bottom: 6px;
+    }
+
+    .skill-name {
+      font-size: 8.5pt;
+      color: #e2e8f0;
+      margin-bottom: 2px;
+    }
+
+    .skill-bar {
+      height: 4px;
+      background: #334155;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #38bdf8);
+      border-radius: 2px;
+    }
+
+    /* Languages */
+    .lang-item {
+      font-size: 8.5pt;
+      color: #cbd5e1;
+      margin-bottom: 4px;
+    }
+
+    .lang-item strong {
+      color: #e2e8f0;
+    }
+
+    /* Certification */
+    .cert-box {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 6px;
+    }
+
+    .cert-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .cert-sub {
+      font-size: 7.5pt;
+      color: #94a3b8;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 25px 22px;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #6366f1;
+      margin-bottom: 4px;
+    }
+
+    .summary {
+      font-size: 9pt;
+      color: #475569;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .main h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #6366f1;
+    }
+
+    .main .section { margin-bottom: 16px; }
+
+    /* Experience */
+    .exp-item { margin-bottom: 12px; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .exp-role {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-period {
+      font-size: 8pt;
+      color: #6366f1;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 9pt;
+      color: #6366f1;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .exp-desc {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-desc li {
+      font-size: 8.5pt;
+      color: #475569;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .exp-desc li::before {
+      content: ">";
+      position: absolute;
+      left: 0;
+      color: #6366f1;
+      font-weight: 700;
+      font-size: 8pt;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 7pt;
+      padding: 1px 6px;
+      background: #eef2ff;
+      color: #4f46e5;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-degree {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-field {
+      font-size: 8.5pt;
+      color: #6366f1;
+    }
+
+    .edu-period {
+      font-size: 8pt;
+      color: #64748b;
+    }
+
+    /* Projects */
+    .proj-item { margin-bottom: 8px; }
+
+    .proj-name {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .proj-desc {
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .stat-box {
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 6px 12px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 13pt;
+      font-weight: 800;
+      color: #6366f1;
+    }
+
+    .stat-label {
+      font-size: 7pt;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page { width: 100%; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <!-- Contact -->
+      <div class="section">
+        <h2>Contact</h2>
+        <div class="contact-item">
+          <span class="icon">@</span>
+          <a href="mailto:setraniainafranckiedev@gmail.com">setraniainafranckiedev<br>@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">T</span>
+          <span>034 58 664 16</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">L</span>
+          <span>Antananarivo 101, Madagascar</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">U</span>
+          <a href="https://www.upwork.com/freelancers/~01cc5073de2985a363">upwork.com/freelancers/franckie</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">G</span>
+          <a href="https://github.com/setradev0">github.com/setradev0</a>
+        </div>
+      </div>
+
+      <!-- Skills Frontend -->
+      <div class="section">
+        <h2>Frontend</h2>
+        <div class="skill-item">
+          <div class="skill-name">Angular</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">HTML5 / CSS3 / Bootstrap</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">JavaScript / TypeScript</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">LWC (Lightning Web Component)</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Skills Backend -->
+      <div class="section">
+        <h2>Backend</h2>
+        <div class="skill-item">
+          <div class="skill-name">Node.js / Strapi</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Java Spring Boot</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Laravel (PHP)</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">WordPress / PHP</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Salesforce Apex</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">GraphQL / Apollo</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Skills DB -->
+      <div class="section">
+        <h2>Base de donn&eacute;es</h2>
+        <div class="skill-item">
+          <div class="skill-name">MySQL</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Elasticsearch</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Redis</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Prisma ORM</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Outils & DevOps -->
+      <div class="section">
+        <h2>Outils &amp; DevOps</h2>
+        <div class="skill-item">
+          <div class="skill-name">Git / SVN</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Docker / CI-CD</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">AWS (S3)</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Swagger / OpenAPI</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Agile / Scrum</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Linux</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <!-- Langues -->
+      <div class="section">
+        <h2>Langues</h2>
+        <div class="lang-item"><strong>Malagasy</strong> &mdash; Langue maternelle</div>
+        <div class="lang-item"><strong>Fran&ccedil;ais</strong> &mdash; Lu, parl&eacute;, &eacute;crit</div>
+        <div class="lang-item"><strong>Anglais</strong> &mdash; Bonne compr&eacute;hension</div>
+      </div>
+
+      <!-- Certification -->
+      <div class="section">
+        <h2>Certification</h2>
+        <div class="cert-box">
+          <div class="cert-title">Salesforce Certified</div>
+          <div class="cert-sub">Platform Developer I</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <div class="name">Setraniaina Franckie<br>RAKOTONIRINA</div>
+      <div class="title">D&eacute;veloppeur Full Stack</div>
+      <div class="summary">
+        +6 ans d'exp&eacute;rience dans la conception et le d&eacute;veloppement d'applications web performantes et &eacute;volutives.
+        Expert en d&eacute;veloppement num&eacute;rique &mdash; je transforme les id&eacute;es en solutions digitales sur mesure.
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-bar">
+        <div class="stat-box">
+          <div class="stat-value">6+</div>
+          <div class="stat-label">Ann&eacute;es d'exp&eacute;rience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">+5,000</div>
+          <div class="stat-label">Heures factur&eacute;es</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Job Success</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">4.9/5</div>
+          <div class="stat-label">Note Upwork</div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="section">
+        <h2>Exp&eacute;riences Professionnelles</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">D&eacute;veloppeur Freelance Fullstack</span>
+            <span class="exp-period">Mars 2021 &mdash; Pr&eacute;sent</span>
+          </div>
+          <div class="exp-company">Upwork &bull; Antananarivo 101</div>
+          <ul class="exp-desc">
+            <li>Conception et d&eacute;veloppement d'applications web sur mesure pour des clients internationaux : e-commerce, plateformes de communication, marketplaces et outils m&eacute;tier</li>
+            <li>Plateforme e-commerce de pi&egrave;ces automobiles avec Angular SSR, Strapi CMS, Spring Boot et int&eacute;gration ERP Epicor (Elasticsearch, Redis, Docker)</li>
+            <li>Plateforme de bureaux virtuels avec appels vid&eacute;o, tchat et webinar en temps r&eacute;el (KonvaJS, WebRTC via mediasoup)</li>
+            <li>Marketplace multicanale avec communication vid&eacute;o/voix (Vonage), messagerie (WhatsApp, Telegram) et paiement Stripe</li>
+            <li>Mise en place de syst&egrave;mes de paiement s&eacute;curis&eacute;s (Stripe, Moneris) et d'architectures temps r&eacute;el (Socket.io)</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">WebRTC</span>
+            <span class="tag">Stripe</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Consultant &amp; D&eacute;veloppeur Salesforce Certifi&eacute;</span>
+            <span class="exp-period">Juin 2020 &mdash; Mars 2022</span>
+          </div>
+          <div class="exp-company">Spoon Consulting</div>
+          <ul class="exp-desc">
+            <li>Conception et d&eacute;veloppement de sites et communities Salesforce Experience Cloud</li>
+            <li>Analyse des besoins clients et transformation en solutions techniques adapt&eacute;es</li>
+            <li>D&eacute;veloppement back-end en Apex et front-end avec Aura Components et LWC, couverture de tests unitaires Jest</li>
+            <li>Gestion de projet en m&eacute;thodologie Agile / Scrum : sprints, revues et livraison continue</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Salesforce</span>
+            <span class="tag">Apex</span>
+            <span class="tag">LWC</span>
+            <span class="tag">Aura</span>
+            <span class="tag">Jest</span>
+            <span class="tag">Agile</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">D&eacute;veloppeur Fullstack Angular / Node.js</span>
+            <span class="exp-period">Juil 2019 &mdash; Mai 2020</span>
+          </div>
+          <div class="exp-company">Startup E-Kiaky</div>
+          <ul class="exp-desc">
+            <li>D&eacute;veloppement d'une application de gestion, g&eacute;olocalisation et d&eacute;mon&eacute;tisation des transports en commun &agrave; Madagascar</li>
+            <li>Mise en place d'un serveur Node.js temps r&eacute;el avec Socket.io et protocole MQTT pour le suivi GPS des bus</li>
+            <li>Int&eacute;gration de MapBox pour la cartographie interactive et AgGrid pour la gestion des donn&eacute;es tabulaires</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MapBox</span>
+            <span class="tag">Socket.io</span>
+            <span class="tag">MQTT</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">D&eacute;veloppeur Web</span>
+            <span class="exp-period">Nov 2018 &mdash; Juin 2019</span>
+          </div>
+          <div class="exp-company">OTIV Tana</div>
+          <ul class="exp-desc">
+            <li>Conception et d&eacute;veloppement du site institutionnel de la microfinance OTIV Tana avec le framework Laravel</li>
+            <li>Mise en place de l'architecture back-end, de la base de donn&eacute;es MySQL et de l'interface utilisateur</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projets -->
+      <div class="section">
+        <h2>Projets Cl&eacute;s</h2>
+
+        <div class="proj-item">
+          <span class="proj-name">PASuper</span> &mdash; <span class="proj-desc">E-commerce pi&egrave;ces auto (Angular SSR, Strapi, Spring Boot, Elasticsearch, Redis) &bull; pasuper.com</span>
+        </div>
+        <div class="proj-item">
+          <span class="proj-name">HubLive</span> &mdash; <span class="proj-desc">Bureaux virtuels avec vid&eacute;oconf&eacute;rence WebRTC, tchat et webinar &bull; hublive.io</span>
+        </div>
+        <div class="proj-item">
+          <span class="proj-name">EvidMind</span> &mdash; <span class="proj-desc">Consultation en ligne avec VoIP Twilio et paiement Stripe &bull; evidmind.com</span>
+        </div>
+        <div class="proj-item">
+          <span class="proj-name">LiviTalk</span> &mdash; <span class="proj-desc">Marketplace multicanale : vid&eacute;o/voix Vonage, WhatsApp, Telegram &bull; livitalk.com</span>
+        </div>
+        <div class="proj-item">
+          <span class="proj-name">Salesforce Experience Cloud</span> &mdash; <span class="proj-desc">Sites et communities Salesforce avec Apex, LWC et Aura</span>
+        </div>
+      </div>
+
+      <!-- Formation -->
+      <div class="section">
+        <h2>Formation</h2>
+
+        <div class="edu-item">
+          <div class="edu-degree">Licence en Informatique</div>
+          <div class="edu-field">Option D&eacute;veloppement Web</div>
+          <div class="edu-period">2018 &mdash; 2019</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Baccalaur&eacute;at</div>
+          <div class="edu-period">2013 &mdash; 2014</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
