@@ -72,10 +72,10 @@ export class Contact {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name: name,
-          from_email: email,
+          name: name,
+          email: email,
           message: message,
-          to_email: 'setraniainafranckiedev@gmail.com',
+          title: `Message de ${name}`,
         },
         EMAILJS_PUBLIC_KEY
       );
