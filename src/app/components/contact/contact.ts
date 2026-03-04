@@ -1,5 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
+
+// ⚠️ À remplacer avec vos clés EmailJS (https://www.emailjs.com)
+const EMAILJS_SERVICE_ID = 'service_crc350a';
+const EMAILJS_TEMPLATE_ID = 'template_ekic3ca';
+const EMAILJS_PUBLIC_KEY = 'G6clxTqMPA6mn4myS';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +19,9 @@ export class Contact {
     email: '',
     message: '',
   });
+
+  isLoading = signal(false);
+  submitStatus = signal<'idle' | 'success' | 'error'>('idle');
 
   contactInfo = [
     {
@@ -47,7 +56,36 @@ export class Contact {
     },
   ];
 
-  onSubmit() {
-    console.log('Form submitted:', this.formData());
+  updateField(field: 'name' | 'email' | 'message', value: string) {
+    this.formData.update((data) => ({ ...data, [field]: value }));
+  }
+
+  async onSubmit() {
+    const { name, email, message } = this.formData();
+    if (!name.trim() || !email.trim() || !message.trim()) return;
+
+    this.isLoading.set(true);
+    this.submitStatus.set('idle');
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
+          to_email: 'setraniainafranckiedev@gmail.com',
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      this.submitStatus.set('success');
+      this.formData.set({ name: '', email: '', message: '' });
+    } catch {
+      this.submitStatus.set('error');
+    } finally {
+      this.isLoading.set(false);
+    }
   }
 }
