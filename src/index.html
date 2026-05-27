@@ -68,8 +68,30 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme');
+      if(t==='dark'||(t===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <style>
+    #app-loader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#f8fafc;transition:opacity .4s ease}
+    .dark #app-loader{background:#020617}
+    #app-loader-spinner{width:44px;height:44px;border-radius:50%;border:3px solid #e0e7ff;border-top-color:#6366f1;animation:_spin .7s linear infinite}
+    .dark #app-loader-spinner{border-color:#312e81;border-top-color:#818cf8}
+    #app-loader-text{font-family:system-ui,sans-serif;font-size:13px;font-weight:500;color:#94a3b8;letter-spacing:.05em}
+    .dark #app-loader-text{color:#475569}
+    @keyframes _spin{to{transform:rotate(360deg)}}
+  </style>
 </head>
 <body class="bg-surface-50 text-surface-800 dark:bg-surface-950 dark:text-surface-100">
+  <div id="app-loader">
+    <div id="app-loader-spinner"></div>
+    <span id="app-loader-text">Chargement…</span>
+  </div>
   <app-root></app-root>
 </body>
 </html>
