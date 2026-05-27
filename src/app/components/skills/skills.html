@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-surface-800 dark:text-white mb-4">Compétences</h2>
-      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
+      <div class="w-20 h-1 bg-linear-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
       <p class="text-surface-500 dark:text-surface-400 mt-4 max-w-xl mx-auto">
         Les technologies et outils que j'utilise pour donner vie à vos projets.
       </p>
@@ -10,9 +10,9 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for (category of skillCategories; track category.title) {
-        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm hover:shadow-md dark:shadow-none border border-surface-200 dark:border-surface-700 transition-all duration-300 hover:-translate-y-1"
+        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm hover:shadow-md dark:shadow-none border border-surface-200 dark:border-surface-700 transition-[box-shadow,transform] duration-300 hover:-translate-y-1"
              [class.lg:col-span-3]="category.icon === 'sparkles'"
-             [class.bg-gradient-to-r]="category.icon === 'sparkles'"
+             [class.bg-linear-to-r]="category.icon === 'sparkles'"
              [class.from-neon-50]="category.icon === 'sparkles'"
              [class.to-pop-50]="category.icon === 'sparkles'"
              [class.dark:from-neon-950/20]="category.icon === 'sparkles'"
@@ -20,7 +20,7 @@
              [class.border-neon-200]="category.icon === 'sparkles'"
              [class.dark:border-neon-800/40]="category.icon === 'sparkles'">
           <div class="flex items-center gap-3 mb-6">
-            <div class="p-2.5 rounded-xl" [class]="category.icon === 'sparkles' ? 'bg-gradient-to-br from-neon-500 to-pop-500' : 'bg-primary-100 dark:bg-primary-900/40'">
+            <div class="p-2.5 rounded-xl" [class]="category.icon === 'sparkles' ? 'bg-linear-to-br from-neon-500 to-pop-500' : 'bg-primary-100 dark:bg-primary-900/40'">
               @if (category.icon === 'layout') {
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -59,7 +59,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
               @for (skill of category.skills; track skill.name) {
                 <div class="text-center p-4 rounded-xl bg-white/70 dark:bg-surface-800/60 border border-neon-100 dark:border-neon-900/30">
-                  <div class="text-2xl font-extrabold bg-gradient-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">{{ skill.level }}%</div>
+                  <div class="text-2xl font-extrabold bg-linear-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">{{ skill.level }}%</div>
                   <div class="text-xs font-medium text-surface-600 dark:text-surface-300 mt-1">{{ skill.name }}</div>
                 </div>
               }
@@ -73,7 +73,7 @@
                     <span class="text-sm text-surface-400 dark:text-surface-500">{{ skill.level }}%</span>
                   </div>
                   <div class="w-full h-2 bg-surface-200 dark:bg-surface-700 rounded-full overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 rounded-full transition-all duration-700"
+                    <div class="h-full bg-linear-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 rounded-full transition-[width] duration-700"
                          [style.width.%]="skill.level">
                     </div>
                   </div>

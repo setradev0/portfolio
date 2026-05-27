@@ -3,12 +3,12 @@
     <!-- Section header -->
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-surface-800 dark:text-white mb-4">Formation</h2>
-      <div class="w-20 h-1 bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
+      <div class="w-20 h-1 bg-linear-to-r from-primary-500 via-neon-500 to-accent-500 mx-auto rounded-full"></div>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-6">
       @for (edu of educations; track edu.degree) {
-        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm border border-surface-200 dark:border-surface-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div class="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm border border-surface-200 dark:border-surface-700 hover:shadow-md transition-[box-shadow,transform] duration-300 hover:-translate-y-1">
           <div class="flex items-start gap-4">
             <div class="p-3 rounded-xl bg-primary-100 dark:bg-primary-900/40 shrink-0">
               @if (edu.icon === 'graduation') {

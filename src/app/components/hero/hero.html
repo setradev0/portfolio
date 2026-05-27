@@ -1,9 +1,6 @@
 <section id="hero" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-20 -left-10 w-80 h-80 bg-primary-500/30 dark:bg-primary-600/20 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 right-0 w-96 h-96 bg-neon-500/25 dark:bg-neon-600/15 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-400/15 dark:bg-accent-500/10 rounded-full blur-3xl"></div>
-    <div class="absolute top-40 right-20 w-48 h-48 bg-pop-500/20 dark:bg-pop-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-linear-to-br from-primary-500/10 via-transparent to-neon-500/10 dark:from-primary-600/8 dark:to-neon-600/8"></div>
   </div>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -18,7 +15,7 @@
     <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
       <span class="text-surface-800 dark:text-white">Rakotonirina Setraniaina Franckie</span>
       <br>
-      <span class="bg-gradient-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 bg-clip-text text-transparent">
+      <span class="bg-linear-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 bg-clip-text text-transparent">
         Développeur Full Stack
       </span>
     </h1>
@@ -31,18 +28,18 @@
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="#projects"
-         class="px-8 py-3.5 bg-gradient-to-r from-primary-600 to-neon-600 hover:from-primary-500 hover:to-neon-500 dark:from-primary-500 dark:to-neon-500 dark:hover:from-primary-400 dark:hover:to-neon-400 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-neon-500/40 hover:-translate-y-1">
+         class="px-8 py-3.5 bg-linear-to-r from-primary-600 to-neon-600 hover:from-primary-500 hover:to-neon-500 dark:from-primary-500 dark:to-neon-500 dark:hover:from-primary-400 dark:hover:to-neon-400 text-white rounded-xl font-semibold transition-[box-shadow,transform] duration-300 shadow-lg shadow-primary-500/30 hover:shadow-neon-500/40 hover:-translate-y-1">
         Voir mes projets
       </a>
       <a href="#contact"
-         class="px-8 py-3.5 border-2 border-primary-300 dark:border-primary-700 hover:border-accent-500 dark:hover:border-accent-400 text-surface-700 dark:text-surface-200 hover:text-accent-600 dark:hover:text-accent-400 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+         class="px-8 py-3.5 border-2 border-primary-300 dark:border-primary-700 hover:border-accent-500 dark:hover:border-accent-400 text-surface-700 dark:text-surface-200 hover:text-accent-600 dark:hover:text-accent-400 rounded-xl font-semibold transition-[border-color,color,transform] duration-300 hover:-translate-y-1">
         Me contacter
       </a>
     </div>
 
     <!-- Upwork trust badge -->
     <a href="https://www.upwork.com/freelancers/~01cc5073de2985a363" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-3 sm:gap-4 mt-10 px-5 py-3 rounded-2xl bg-white/80 dark:bg-surface-800/80 backdrop-blur-sm border border-surface-200 dark:border-surface-700 shadow-sm hover:shadow-md hover:border-green-300 dark:hover:border-green-700 transition-all duration-300 group">
+       class="inline-flex items-center gap-3 sm:gap-4 mt-10 px-5 py-3 rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-sm hover:shadow-md hover:border-green-300 dark:hover:border-green-700 transition-[border-color,box-shadow] duration-300 group">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703 0 1.491-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
       </svg>
@@ -56,7 +53,7 @@
         <span class="hidden sm:inline text-surface-400 dark:text-surface-600">|</span>
         <span class="hidden sm:inline font-semibold text-green-700 dark:text-green-400">100% Job Success</span>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-surface-400 group-hover:text-green-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-surface-400 group-hover:text-green-500 group-hover:translate-x-0.5 transition-[color,transform]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
       </svg>
     </a>
@@ -121,12 +118,12 @@
 
       <!-- Vibe Coding -->
       <div class="group flex flex-col items-center gap-2">
-        <div class="p-3 rounded-2xl bg-gradient-to-br from-neon-500 to-pop-500 shadow-sm shadow-neon-500/20 border border-neon-400/30 dark:border-neon-600/30 group-hover:-translate-y-1 transition-transform duration-300">
+        <div class="p-3 rounded-2xl bg-linear-to-br from-neon-500 to-pop-500 shadow-sm shadow-neon-500/20 border border-neon-400/30 dark:border-neon-600/30 group-hover:-translate-y-1 transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 sm:h-12 sm:w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
           </svg>
         </div>
-        <span class="text-xs font-medium bg-gradient-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">Vibe Coding</span>
+        <span class="text-xs font-medium bg-linear-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">Vibe Coding</span>
       </div>
     </div>
 
