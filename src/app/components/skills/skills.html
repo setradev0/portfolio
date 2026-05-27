@@ -51,36 +51,19 @@
             <h3 class="text-lg font-bold text-surface-800 dark:text-white">{{ category.title }}</h3>
           </div>
 
-          <!-- Vibe Coding: horizontal grid layout -->
-          @if (category.icon === 'sparkles') {
-            <p class="text-sm text-surface-500 dark:text-surface-400 mb-5">
-              J'utilise l'IA comme accélérateur de productivité pour coder plus vite, plus proprement et livrer des solutions robustes.
-            </p>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              @for (skill of category.skills; track skill.name) {
-                <div class="text-center p-4 rounded-xl bg-white/70 dark:bg-surface-800/60 border border-neon-100 dark:border-neon-900/30">
-                  <div class="text-2xl font-extrabold bg-linear-to-r from-neon-500 to-pop-500 bg-clip-text text-transparent">{{ skill.level }}%</div>
-                  <div class="text-xs font-medium text-surface-600 dark:text-surface-300 mt-1">{{ skill.name }}</div>
-                </div>
+          <div class="flex flex-wrap gap-2">
+            @for (skill of category.skills; track skill) {
+              @if (category.icon === 'sparkles') {
+                <span class="px-3 py-1.5 text-sm font-medium rounded-lg bg-white/70 dark:bg-surface-800/60 border border-neon-200 dark:border-neon-800/40 text-neon-700 dark:text-neon-300">
+                  {{ skill }}
+                </span>
+              } @else {
+                <span class="px-3 py-1.5 text-sm font-medium rounded-lg bg-primary-50 dark:bg-primary-900/30 border border-primary-100 dark:border-primary-800/40 text-primary-700 dark:text-primary-300">
+                  {{ skill }}
+                </span>
               }
-            </div>
-          } @else {
-            <div class="space-y-4">
-              @for (skill of category.skills; track skill.name) {
-                <div>
-                  <div class="flex justify-between mb-1.5">
-                    <span class="text-sm font-medium text-surface-700 dark:text-surface-300">{{ skill.name }}</span>
-                    <span class="text-sm text-surface-400 dark:text-surface-500">{{ skill.level }}%</span>
-                  </div>
-                  <div class="w-full h-2 bg-surface-200 dark:bg-surface-700 rounded-full overflow-hidden">
-                    <div class="h-full bg-linear-to-r from-primary-500 via-neon-500 to-accent-500 dark:from-primary-400 dark:via-neon-400 dark:to-accent-400 rounded-full transition-[width] duration-700"
-                         [style.width.%]="skill.level">
-                    </div>
-                  </div>
-                </div>
-              }
-            </div>
-          }
+            }
+          </div>
         </div>
       }
     </div>
