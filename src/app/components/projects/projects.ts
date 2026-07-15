@@ -36,15 +36,6 @@ export class Projects {
       link: 'https://evidmind.com',
     },
     {
-      title: 'Communication Multicanale',
-      description:
-        'Marketplace de services professionnels avec communication multicanale : appels vidéo/voix (Vonage), SMS, WhatsApp, Telegram et tchat in-app. Vente de vidéos et images à la demande ou par abonnement. Système de crédits et paiement Stripe.',
-      tags: ['Angular', 'Node.js', 'Vonage', 'Stripe', 'Socket.io', 'Swagger'],
-      image: 'chat',
-      logo: 'images/livitalk-logo.png',
-      link: 'https://livitalk.com/',
-    },
-    {
       title: 'Expériences Cloud Salesforce',
       description:
         'Développement de sites et communities Salesforce. Transformation des besoins clients en solutions techniques avec Apex, Aura Components et LWC.',
