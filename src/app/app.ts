@@ -8,10 +8,11 @@ import { Projects } from './components/projects/projects';
 import { Contact } from './components/contact/contact';
 import { Education } from './components/education/education';
 import { Footer } from './components/footer/footer';
+import { Chatbot } from './components/chatbot/chatbot';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Hero, About, Experience, Skills, Projects, Education, Contact, Footer],
+  imports: [Header, Hero, About, Experience, Skills, Projects, Education, Contact, Footer, Chatbot],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
