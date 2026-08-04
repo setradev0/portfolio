@@ -11,7 +11,7 @@ export class Experience {
       role: 'Développeur Freelance Fullstack',
       company: 'Upwork',
       location: 'Antananarivo 101',
-      period: 'Mars 2021 - Présent',
+      period: 'Mars 2022 - Présent',
       description: [
         'Conception et développement d\'applications web sur mesure pour des clients internationaux : e-commerce, plateformes de communication, marketplaces et outils métier',
         'Plateforme e-commerce de pièces automobiles avec Angular SSR, Strapi CMS, Spring Boot et intégration ERP Epicor (Elasticsearch, Redis, Docker)',
